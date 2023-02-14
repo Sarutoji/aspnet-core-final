@@ -1,0 +1,37 @@
+﻿@model ToDoListViewModel
+
+<h2>Lists</h2>
+
+<p>
+    <a asp-action="CreateList">Create new List</a>
+</p>
+<p>
+    <a asp-action="Index" asp-controller="Home" asp-route-completed="false" asp-route-page="1" >Show completed lists</a>
+    <a asp-action="Index" asp-controller="Home" asp-route-completed="true" asp-route-page="1" >Hide completed lists</a>
+</p>
+
+@foreach (var l in Model.Lists)
+{
+    <partial name="ListSummary" model="l" />
+}
+
+<div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true"
+        page-class="btn" page-class-normal="btn-outline-dark"
+        page-class-selected="btn-primary" class="btn-group pull-right m-1">
+</div>
+
+@*
+@section Scripts{
+    
+    <script>
+        $(function () {
+            $('#mainContent').on('click', '.pager a', function () {
+                var url = $(this).attr('href');
+
+                $('mainContent').load(url);
+
+                return false;
+            })
+        })
+    </script>
+}*@

@@ -1,0 +1,52 @@
+﻿@model ToDoWebApp.Models.ToDoList
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create new List</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+    <form asp-action="CreateList">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Name" class="control-label">List Name</label>
+            <input asp-for="Name" class="form-control" id="Name" placeholder="Name of you new ToDo List" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <table>
+                    <tr>
+                        <td>
+                            @Html.CheckBoxFor(x => x.IsCompleted)
+                            List Completed
+                        </td>
+                        <td>
+                            @Html.CheckBoxFor(x => x.IsHidden)
+                            Mark list as hidden list
+                        </td>
+                        <td>
+                            @Html.CheckBoxFor(x => x.IsImportant)
+                            Mark list as important list
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </div>
+    </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

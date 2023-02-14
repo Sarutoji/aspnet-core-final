@@ -1,0 +1,134 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Sarutoji\\source\\repos\\aspnet-core-final-project\\todo-app-tests\\todo-app-tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Sarutoji\\source\\repos\\aspnet-core-final-project\\todo-app-tests\\todo-app-tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Sarutoji\\source\\repos\\aspnet-core-final-project\\todo-app-tests\\todo-app-tests.csproj",
+        "projectName": "todo-app-tests",
+        "projectPath": "C:\\Users\\Sarutoji\\source\\repos\\aspnet-core-final-project\\todo-app-tests\\todo-app-tests.csproj",
+        "packagesPath": "C:\\Users\\Sarutoji\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sarutoji\\source\\repos\\aspnet-core-final-project\\todo-app-tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Sarutoji\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Sarutoji\\source\\repos\\aspnet-core-final-project\\todo-entities\\todo-entities.csproj": {
+                "projectPath": "C:\\Users\\Sarutoji\\source\\repos\\aspnet-core-final-project\\todo-entities\\todo-entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.16.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Sarutoji\\source\\repos\\aspnet-core-final-project\\todo-entities\\todo-entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Sarutoji\\source\\repos\\aspnet-core-final-project\\todo-entities\\todo-entities.csproj",
+        "projectName": "todo-entities",
+        "projectPath": "C:\\Users\\Sarutoji\\source\\repos\\aspnet-core-final-project\\todo-entities\\todo-entities.csproj",
+        "packagesPath": "C:\\Users\\Sarutoji\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sarutoji\\source\\repos\\aspnet-core-final-project\\todo-entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Sarutoji\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

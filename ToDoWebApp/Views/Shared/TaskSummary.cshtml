@@ -1,0 +1,36 @@
+﻿@model ToDoTask
+<div class="card card-outline-primary m-1 p-1">
+    <div class="bg-faded p-1">
+        <h4>
+            @Model.Name
+            <span class="card-text p-1">
+                <small>@Model.DueDate.ToString("D")</small>
+            </span>
+            @if (Model.IsCompleted)
+            {
+                <span class="badge badge-pill badge-success" style="float:left">
+                    <small>Completed</small>
+                </span>
+            } 
+            @if (Model.IsInProgress)
+            {
+                <span class="badge badge-pill badge-primary" style="float:left">
+                    <small>In Progress</small>
+                </span>
+            }
+            <a asp-action="Delete" asp-route-id="@Model.Id" style="float:right">Delete</a>
+            <a asp-action="Edit" asp-route-id="@Model.Id" style="float:right">Edit</a>
+            <a asp-action="Details" asp-route-id="@Model.Id" style="float:right">Details</a>
+        </h4>
+    </div>
+    <span class="card-text p-1">
+        @Model.Description
+    </span> 
+    @if (Model.AdditionalInfo != null)
+    {
+        <span class="card-text p-1">
+            <em>@Model.AdditionalInfo</em>
+        </span>    
+    }
+</div>
+

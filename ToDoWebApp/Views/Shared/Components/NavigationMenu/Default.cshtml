@@ -1,0 +1,8 @@
+﻿<a class="btn btn-block btn-outline-secondary" asp-action="Index"
+asp-controller="Home" asp-route-important="">Home</a>
+<a class="btn btn-block @("true" == ViewBag.SelectedHidden ? "btn-primary" : "btn-outline-secondary")" asp-action="Today"
+asp-controller="Task"  asp-route-page="1">Today</a>
+<a class="btn btn-block @("true" == ViewBag.SelectedImportant ? "btn-primary" : "btn-outline-secondary")" asp-action="Index"
+asp-controller="Home" asp-route-important="true" asp-route-page="1">Important</a>
+<a class="btn btn-block @("true" == ViewBag.SelectedHidden ? "btn-primary" : "btn-outline-secondary")" asp-action="Hidden"
+asp-controller="Home" asp-route-hidden="true" asp-route-page="1">Hidden lists</a>

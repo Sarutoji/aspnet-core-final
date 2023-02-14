@@ -1,0 +1,67 @@
+﻿@model ToDoTask
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<h1>Create new Task</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-10">
+        <form asp-action="CreateTask">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ListId" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Task Name</label>
+                <input asp-for="Name" class="form-control" id="Name" placeholder="Name of your new ToDo Task" required />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label">Task description</label>
+                <textarea asp-for="Description" class="form-control" id="Description" 
+                placeholder="Description of you ToDo Task" rows="3"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdditionalInfo" class="control-label">Additional Info</label>
+                <textarea asp-for="AdditionalInfo" class="form-control" id="AdditionalInfo" 
+                placeholder="Add aditional info about your task here" rows="2"></textarea>
+                <span asp-validation-for="AdditionalInfo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DueDate" class="control-label">Deadline</label>
+                <input asp-for="DueDate" class="datePicker" id="DueDate"
+                placeholder="Choose deadline date for this task" type="date" value="3/08/2022" required/>
+                <span asp-validation-for="DueDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <table>
+                    <tr>
+                        <td>
+                            @Html.CheckBoxFor(x => x.IsInProgress)
+                            Task in progress
+                        </td>
+                        <td>
+                            @Html.CheckBoxFor(x => x.IsCompleted)
+                            Task finished
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" asp-route-listId="@Model.ListId" asp-route-page="1">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

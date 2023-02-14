@@ -1,0 +1,20 @@
+﻿@model ToDoList
+<div class="card card-outline-primary m-1 p-1">
+    <div class="bg-faded p-1">
+        <h4>
+            @Model.Name
+            <a class="btn btn-sm" asp-action="Index" asp-controller="Task" asp-route-listId="@Model.Id" asp-route-page="1" asp-route-completed="true">
+                View tasks
+            </a>
+            @if (Model.IsCompleted)
+            {
+                <span class="badge badge-pill badge-success" style="float:left">
+                    <small>Completed</small>
+                </span>
+            } 
+            <a asp-action="Delete" asp-route-id="@Model.Id" style="float:right">Delete</a>
+            <a asp-action="Copy" asp-route-id="@Model.Id" style="float:right">Copy</a>
+            <a asp-action="Edit" asp-route-id="@Model.Id" style="float:right">Edit</a>
+        </h4>
+    </div>
+</div>

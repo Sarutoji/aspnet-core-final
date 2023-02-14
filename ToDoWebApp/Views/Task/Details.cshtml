@@ -1,0 +1,17 @@
+﻿@model ToDoTask
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<partial name="TaskDetails" />
+
+<div>
+    <a asp-action="Index" asp-route-listId="@Model.ListId" asp-route-completed="true" asp-route-page="1">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

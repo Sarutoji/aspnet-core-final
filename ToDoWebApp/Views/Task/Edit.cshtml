@@ -1,0 +1,66 @@
+﻿@model ToDoTask
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit Task</h1>
+<hr />
+<div class="row">
+    <div class="col-md-10">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="ListId" />
+            <input type="hidden" asp-for="CreationDate" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Task Name</label>
+                <input asp-for="Name" class="form-control" id="Name" required/>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label">Task description</label>
+                <textarea asp-for="Description" class="form-control" id="Description" 
+                rows="3"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdditionalInfo" class="control-label">Additional Info</label>
+                <textarea asp-for="AdditionalInfo" class="form-control" id="AdditionalInfo" 
+                rows="2"></textarea>
+                <span asp-validation-for="AdditionalInfo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DueDate" class="control-label">Deadline</label>
+                <input asp-for="DueDate" class="datePicker" id="DueDate"
+                type="date" value="@DateTime.Today" required/>
+                <span asp-validation-for="DueDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <table>
+                    <tr>
+                        <td>
+                            @Html.CheckBoxFor(x => x.IsInProgress)
+                            Task in progress
+                        </td>
+                        <td>
+                            @Html.CheckBoxFor(x => x.IsCompleted)
+                            Task finished
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" asp-route-listId="@Model.ListId" asp-route-completed="true" asp-route-page="1">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

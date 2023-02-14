@@ -1,0 +1,17 @@
+﻿@model ToDoListViewModel
+
+<h2>Hidden Lists</h2>
+
+<p>
+    <a asp-action="CreateList">Create new List</a>
+</p>
+
+@foreach (var l in Model.Lists)
+{
+    <partial name="ListSummary" model="l" />
+}
+
+<div page-model="@Model.PagingInfo" page-action="Hidden" page-classes-enabled="true"
+        page-class="btn" page-class-normal="btn-outline-dark"
+        page-class-selected="btn-primary" class="btn-group pull-right m-1">
+</div>

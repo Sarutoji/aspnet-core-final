@@ -1,0 +1,10 @@
+C:\Users\Sarutoji\source\repos\aspnet-core-final-project\todo-entities\bin\Debug\netcoreapp3.1\todo-entities.deps.json
+C:\Users\Sarutoji\source\repos\aspnet-core-final-project\todo-entities\bin\Debug\netcoreapp3.1\todo-entities.dll
+C:\Users\Sarutoji\source\repos\aspnet-core-final-project\todo-entities\bin\Debug\netcoreapp3.1\todo-entities.pdb
+C:\Users\Sarutoji\source\repos\aspnet-core-final-project\todo-entities\obj\Debug\netcoreapp3.1\todo-entities.csproj.AssemblyReference.cache
+C:\Users\Sarutoji\source\repos\aspnet-core-final-project\todo-entities\obj\Debug\netcoreapp3.1\todo-entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sarutoji\source\repos\aspnet-core-final-project\todo-entities\obj\Debug\netcoreapp3.1\todo-entities.AssemblyInfoInputs.cache
+C:\Users\Sarutoji\source\repos\aspnet-core-final-project\todo-entities\obj\Debug\netcoreapp3.1\todo-entities.AssemblyInfo.cs
+C:\Users\Sarutoji\source\repos\aspnet-core-final-project\todo-entities\obj\Debug\netcoreapp3.1\todo-entities.csproj.CoreCompileInputs.cache
+C:\Users\Sarutoji\source\repos\aspnet-core-final-project\todo-entities\obj\Debug\netcoreapp3.1\todo-entities.dll
+C:\Users\Sarutoji\source\repos\aspnet-core-final-project\todo-entities\obj\Debug\netcoreapp3.1\todo-entities.pdb

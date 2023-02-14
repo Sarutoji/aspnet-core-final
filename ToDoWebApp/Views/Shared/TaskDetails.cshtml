@@ -1,0 +1,60 @@
+﻿@model ToDoTask
+<div class="card card-outline-primary m-1 p-1">
+    <div class="bg-faded p-1">
+        <h4>
+            @Model.Name
+        </h4>
+        <span class="card-text p-1">
+            <strong>Task ID: </strong> @Model.Id
+        </span>
+        <br />
+        <span class="card-text p-1">
+            <strong>List ID: </strong> @Model.ListId
+        </span>
+        <br />
+        <span class="card-text p-1">
+            <strong>Description: </strong> @Model.Description
+        </span>
+        <br />
+        <span class="card-text p-1">
+            <strong>Additional info: </strong> @Model.AdditionalInfo
+        </span>
+        <br />
+        <span class="card-text p-1">
+            <strong>Deadline: </strong> @Model.DueDate.ToString("D")
+        </span>
+        <br />
+        <span class="card-text p-1">
+            <strong>Creation Date: </strong> @Model.CreationDate
+        </span>
+        <br />
+        @if (Model.IsCompleted)
+        {
+            <span class="card-text p-1">
+                <strong>Is finished: </strong> Yes
+            </span>
+            <br />
+        }
+        else
+        {
+            <span class="card-text p-1">
+                <strong>Is finished: </strong> No
+            </span>
+            <br />          
+        }
+        @if (Model.IsInProgress)
+        {
+            <span class="card-text p-1">
+                <strong>Is in progress: </strong> Yes
+            </span>
+            <br />
+        }
+        else
+        {
+            <span class="card-text p-1">
+                <strong>Is in progress: </strong> No
+            </span>
+            <br />                
+        }
+    </div>
+</div>
